@@ -1,7 +1,11 @@
 export default defineNuxtConfig({
   modules: ["@nuxtjs/i18n"],
   devtools: { enabled: false },
-
+  nitro: {
+    prerender: {
+      routes: ["/something/value", "/something-translated/translated-value"],
+    },
+  },
   i18n: {
     defaultLocale: "en",
     locales: [
